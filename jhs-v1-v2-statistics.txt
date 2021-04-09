@@ -1,0 +1,137 @@
+Statistical models (generalized linear mixed-effects models) implemented in R (version 4) to test the 
+effects of time (year) and genre on different word orders from IcePaHC (Wallenberg et al., 2011).
+Text is implemented as a random effect in the models. 
+
+Specifics about the statistical testing are given in Section 3 of the paper, the results of the 
+statistical analyses are presented in Section 6.
+
+jhs-v1v2-data-for-statistics.tsv provides the underlying dataset for the statistical analyses (referenced in the models below as 'topic.pos').
+
+R libraries used: lme4, lmerTest.
+
+
+
+-SUBJTOP-V (subject-topic initial V2) as response variable 
+
+> model = glmer(SUBJTOP.V ~ YEAR + GENRE + (1|TEXT), data = topic.pos, family = binomial)
+
+> summary(model)
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: SUBJTOP.V ~ YEAR + GENRE + (1 | TEXT)
+   Data: topic.pos
+
+     AIC      BIC   logLik deviance df.resid 
+ 23445.1  23499.8 -11715.6  23431.1    18110 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.0296 -0.9117  0.4927  0.8781  2.6536 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ TEXT   (Intercept) 0.3364   0.58    
+Number of obs: 18117, groups:  TEXT, 61
+
+Fixed effects:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -2.4716717  0.5331836  -4.636 3.56e-06 ***
+YEAR         0.0015300  0.0003229   4.738 2.16e-06 ***
+GENREBIO    -0.6047287  0.2946601  -2.052   0.0401 *  
+GENRELAW     0.2780637  0.6563909   0.424   0.6718    
+GENREREL     0.2064843  0.1938333   1.065   0.2868    
+GENRESCI    -0.4458198  0.5031259  -0.886   0.3756    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) YEAR   GENREB GENREL GENRER
+YEAR     -0.984                            
+GENREBIO  0.007 -0.065                     
+GENRELAW -0.197  0.175  0.035              
+GENREREL -0.253  0.169  0.145  0.100       
+GENRESCI -0.096  0.064  0.056  0.038  0.102
+
+ 
+-V-SUBJTOP (narrative inversion V1) as response variable  
+
+> model = glmer(V.SUBJTOP ~ YEAR + GENRE + (1|TEXT), data = topic.pos, family = binomial)
+ 
+> summary(model)
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: V.SUBJTOP ~ YEAR + GENRE + (1 | TEXT)
+   Data: topic.pos
+
+     AIC      BIC   logLik deviance df.resid 
+ 12953.2  13007.8  -6469.6  12939.2    18110 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.4995 -0.5582 -0.2059 -0.0927 13.3345 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ TEXT   (Intercept) 2.026    1.423   
+Number of obs: 18117, groups:  TEXT, 61
+
+Fixed effects:
+              Estimate Std. Error z value Pr(>|z|)    
+(Intercept)  4.0746582  1.2155217   3.352 0.000802 ***
+YEAR        -0.0037987  0.0007428  -5.114 3.15e-07 ***
+GENREBIO     0.1014464  0.7021432   0.144 0.885121    
+GENRELAW    -1.1117143  1.5125172  -0.735 0.462334    
+GENREREL    -1.6815472  0.4855865  -3.463 0.000534 ***
+GENRESCI    -1.6954264  1.2796890  -1.325 0.185213    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) YEAR   GENREB GENREL GENRER
+YEAR     -0.982                            
+GENREBIO  0.007 -0.070                     
+GENRELAW -0.191  0.165  0.038              
+GENREREL -0.239  0.152  0.146  0.097       
+GENRESCI -0.178  0.147  0.050  0.051  0.110
+
+
+-XP-V-SUBJTOP (non-subject-initial V2) as response variable
+ 
+> model = glmer(XP.V.SUBJTOP ~ YEAR + GENRE + (1|TEXT), data = topic.pos, family = binomial)
+
+> summary(model)
+Generalized linear mixed model fit by maximum likelihood (Laplace Approximation) ['glmerMod']
+ Family: binomial  ( logit )
+Formula: XP.V.SUBJTOP ~ YEAR + GENRE + (1 | TEXT)
+   Data: topic.pos
+
+     AIC      BIC   logLik deviance df.resid 
+ 21726.9  21781.5 -10856.5  21712.9    18109 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-1.3067 -0.6470 -0.5706  1.0704  2.2746 
+
+Random effects:
+ Groups Name        Variance Std.Dev.
+ TEXT   (Intercept) 0.2097   0.458   
+Number of obs: 18116, groups:  TEXT, 61
+
+Fixed effects:
+              Estimate Std. Error z value Pr(>|z|)   
+(Intercept) -0.1971412  0.4138660  -0.476  0.63383   
+YEAR        -0.0004232  0.0002509  -1.687  0.09166 . 
+GENREBIO     0.5749711  0.2369329   2.427  0.01524 * 
+GENRELAW     0.4117602  0.5442649   0.757  0.44932   
+GENREREL     0.4419142  0.1557231   2.838  0.00454 **
+GENRESCI     0.9098544  0.4153657   2.190  0.02849 * 
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+         (Intr) YEAR   GENREB GENREL GENRER
+YEAR     -0.983                            
+GENREBIO  0.007 -0.067                     
+GENRELAW -0.185  0.162  0.034              
+GENREREL -0.241  0.154  0.146  0.093       
+GENRESCI -0.101  0.068  0.054  0.037  0.100
