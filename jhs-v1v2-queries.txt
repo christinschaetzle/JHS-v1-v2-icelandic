@@ -1,9 +1,9 @@
-Matrix clauses not introduced by a conjunction
-Subject topics = any referential subject NP which is pronominal or has overt definite marking
+All search queries conducted with CorpusSearch2 (Randall 2005).
+All data extracted from IcePaHC (Wallenberg et al. 2011).
 
 Search queries for Table 2: Stylistic Fronting in matrix declaratives by subject type in IcePaHC, 1150-1350
 SF with definite SUBJ
-- query: (IP-MAT|IP-MAT-SPE iDoms  NP-SBJ*) AND (NP-SBJ* iDoms PRO-*|D-*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) 
+- query: (IP-MAT|IP-MAT-SPE iDoms NP-SBJ*) AND (NP-SBJ* iDoms PRO-*|D-*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) 
 SF with indefinite SUBJ (presentationals)
 - query: (IP-MAT|IP-MAT-SPE iDoms NP-SBJ*) AND (NP-SBJ* iDoms !PRO-*|D-*|NPR-*|\*pro\*|\*con\*|\*exp\*) AND (IP-MAT|IP-MAT-SPE iDomsFirst VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) 
 SF with pro-subj 
@@ -13,13 +13,14 @@ SF genuinely subjectless (impersonals)
 
 Search queries for Table 4: Relative order of finite verb and subject topic in Old Icelandic (1150-1350)
 SUBJTOPIC-V
-- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms  !CP-REL) 
+- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
 V-SUBJTOPIC
 - query: (IP-MAT|IP-MAT-SPE iDomsFirst VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
 
 Search queries for Table 5: Positional distribution of subject topics in IcePaHC (1150-1350 vs. 1900-2008)
+These search queries were also used to extract the data for Figures 1, 2 and 3 and Tables 6 and 7 in the Appendix and also provide the input data for the statistical analysis (see also jhs-v1v2-data-for-statistics.tsv).
 SUBJTOPIC-V (as for Table 4)
-- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms  !CP-REL) 
+- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
 V-SUBJTOPIC (as for Table 4)
 - query: (IP-MAT|IP-MAT-SPE iDomsFirst VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
 XP-VP-SUBJTOPIC
