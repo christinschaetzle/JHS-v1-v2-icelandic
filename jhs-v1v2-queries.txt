@@ -1,0 +1,27 @@
+Matrix clauses not introduced by a conjunction
+Subject topics = any referential subject NP which is pronominal or has overt definite marking
+
+Search queries for Table 2: Stylistic Fronting in matrix declaratives by subject type in IcePaHC, 1150-1350
+SF with definite SUBJ
+- query: (IP-MAT|IP-MAT-SPE iDoms  NP-SBJ*) AND (NP-SBJ* iDoms PRO-*|D-*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) 
+SF with indefinite SUBJ (presentationals)
+- query: (IP-MAT|IP-MAT-SPE iDoms NP-SBJ*) AND (NP-SBJ* iDoms !PRO-*|D-*|NPR-*|\*pro\*|\*con\*|\*exp\*) AND (IP-MAT|IP-MAT-SPE iDomsFirst VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) 
+SF with pro-subj 
+- query: (IP-MAT|IP-MAT-SPE iDomsFirst NP-SBJ*) AND (NP-SBJ* iDoms \*pro\*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) AND (IP-MAT|IP-MAT-SPE iDomsNumber 3 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) 
+SF genuinely subjectless (impersonals)
+- query: (IP-MAT|IP-MAT-SPE iDomsFirst NP-SBJ*) AND (NP-SBJ* iDoms \*exp\*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) AND (IP-MAT|IP-MAT-SPE iDomsNumber 3 VBI|VBP*|VBD*|BEI|BEP*|BED*|DOI|DOP*|DOD*|HVI|HVP*|HVD*|MDI|MDP*|MDD*|RDI|RDP*|RDD*) 
+
+Search queries for Table 4: Relative order of finite verb and subject topic in Old Icelandic (1150-1350)
+SUBJTOPIC-V
+- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms  !CP-REL) 
+V-SUBJTOPIC
+- query: (IP-MAT|IP-MAT-SPE iDomsFirst VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
+
+Search queries for Table 5: Positional distribution of subject topics in IcePaHC (1150-1350 vs. 1900-2008)
+SUBJTOPIC-V (as for Table 4)
+- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsFirst  NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms  !CP-REL) 
+V-SUBJTOPIC (as for Table 4)
+- query: (IP-MAT|IP-MAT-SPE iDomsFirst VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 2 NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) 
+XP-VP-SUBJTOPIC
+- query: (IP-MAT|IP-MAT-SPE iDomsNumber 2 VBP*|VBD*|BEP*|BED*|DOP*|DOD*|HVP*|HVD*|MDP*|MDD*|RDP*|RDD*) AND (IP-MAT|IP-MAT-SPE iDomsNumber 3 NP-SBJ*) AND (NP-SBJ* iDoms PRO*|D-*) AND (NP-SBJ* iDoms !CP-REL) AND (IP-MAT|IP-MAT-SPE iDomsFirst !CONJ|INTJ|VB|BE|DO|HV|MD|RD|VBN*|BEN*|DON*|HVN*|RDN*|VAN*|BAN*|DAN*|HAN*|VAG|BAG|HAG|RP|NEG|ADJP-PRD|NP-PRD|ADJP) 
+
