@@ -1,5 +1,5 @@
 Statistical models (generalized linear mixed-effects models) implemented in R (version 4) to test the 
-effects of time (year) and genre on different word orders from IcePaHC (Wallenberg et al., 2011).
+effects of time (year) and genre on different word orders extracted from IcePaHC (Wallenberg et al., 2011).
 Text is implemented as a random effect in the models. 
 
 Specifics about the statistical testing are given in Section 3 of the paper, the results of the 
