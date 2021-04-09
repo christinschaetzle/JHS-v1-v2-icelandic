@@ -1,6 +1,6 @@
 # JHS-v1v2-icelandic
 
-This repository provides the Corpus Search queries used for data extraction and the dataset used for statistical analysis in the paper
+This repository provides the CorpusSearch queries used for data extraction and the dataset used for statistical analysis in the paper
 
 Hannah Booth & Christin Beck. to appear. Verb-second and verb-first in the history of Icelandic. In: Journal of Historical Syntax.
 (A link to the paper will follow once it is published.)
