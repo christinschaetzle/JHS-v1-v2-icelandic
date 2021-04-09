@@ -7,4 +7,4 @@ Hannah Booth & Christin Beck. to appear. Verb-second and verb-first in the histo
 
 The file jhs-v1v2-queries.txt contains the search queries.
 The dataset used for statistics is given in jhs-v1v2-data-for-statistics.tsv.
-XYZ contains information about the statistical models as implemented in R and shows the resulting analysis.
+jhs-v1v2-statistics.txt contains information about the statistical models as implemented in R and shows the resulting analysis.
